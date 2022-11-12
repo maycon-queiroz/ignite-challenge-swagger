@@ -83,34 +83,34 @@ For this test, the `list` method of UsersRepository file return a list of all cr
 
 ### 📌 Should be able to find user by ID
 
-For this test, the `findById` method of UsersRepository file must recieve the user `id` and return an user who has the same `id`.
+For this test, the `findById` method of UsersRepository file must receive the user `id` and return an user who has the same `id`.
 
 ### 📌 Should be able to find user by e-mail address
 
-For this test, the `findByEmail` method of UsersRepository file must recieve the user `email` and return the user who has the same `email`.
+For this test, the `findByEmail` method of UsersRepository file must receive the user `email` and return the user who has the same `email`.
 
 ### 📌 Should be able to turn an user as admin
 
-For this test, the `turnAdmin` method of UsersRepository must recieve the whole user object, change the `admin` property to `true`, update the `updated_at` propety and return the updated user.
+For this test, the `turnAdmin` method of UsersRepository must receive the whole user object, change the `admin` property to `true`, update the `updated_at` propety and return the updated user.
 
 ## 📚 UseCases Tests
 
 ### 📌 Should be able to create new users
 
-For this test, the `execute` method of CreateUserUseCase file must recieve the user `name` and `email` to be created, create an user through the repository's create method and return the created user.
+For this test, the `execute` method of CreateUserUseCase file must receive the user `name` and `email` to be created, create an user through the repository's create method and return the created user.
 
 ### 📌 Should not be able to create new users when email is already taken
 
 For this test, the `execute` method of CreateUserUseCase file must not allow an user to be created if exist an user with the same `email`.
 
-If exist an user with the same email retun the error message:
+If exist an user with the same email return the error message:
 ```tsx
 throw new Error("Mensagem do erro");
 ```
 
 ### 📌 Should be able to turn an user as admin
 
-For this test, the `execute` method of TurnUserAdminUseCase file must recieve the user `id`, call the repository method wich change the user to `admin` and return the user after the change.
+For this test, the `execute` method of TurnUserAdminUseCase file must receive the user `id`, call the repository method wich change the user to `admin` and return the user after the change.
 
 ### 📌 Should not be able to turn a non existing user as admin
 
@@ -122,7 +122,7 @@ throw new Error("Mensagem do erro");
 ```
 ### 📌 Should be able to get user profile by ID
 
-For this test, the `execute` method of ShowUserProfileUseCase file must recieve the user `id`, call the repository's method wich search an user by `id` and return the user found.
+For this test, the `execute` method of ShowUserProfileUseCase file must receive the user `id`, call the repository's method wich search an user by `id` and return the user found.
 
 ### 📌 Should not be able to show profile of a non existing user
 
@@ -138,7 +138,7 @@ For this test, the `execute` method of ListAllUsersUseCase file must recieve the
 
 ### 📌 Should not be able to a non admin user get list of all users
 
-For this test, the `execute` method of ListAllUsersUseCase must not allow an user who is not a `admin` acess the created users.
+For this test, the `execute` method of ListAllUsersUseCase must not allow an user who is not a `admin` access the created users.
 
 If the user is not an `admin`, return a message error:
 ```tsx
@@ -146,7 +146,7 @@ throw new Error("Mensagem do erro");
 ```
 ### 📌 Should not be able to a non existing user get list of all users
 
-For this test, the `execute` method of ListAllUsersUse Case file must not allow an user does not exist, acess the created users list.
+For this test, the `execute` method of ListAllUsersUse Case file must not allow an user does not exist, access the created users list.
 
 If the user does not exist, return a message error:
 ```tsx
@@ -201,7 +201,7 @@ Implementation of extra features.
 
 For this test, the `execute` method of CreateUserUseCase file must not allow an user to be created if the field `email` or `name` is empty.
 
-If exist an user with the same email retun the error message:
+If exist an user with the same email return the error message:
 ```tsx
 throw new Error("Mensagem do erro");
 ```
@@ -209,18 +209,14 @@ throw new Error("Mensagem do erro");
 <br>
 
 # 👩‍💼 Author
-<img style="border-radius: 50%" src="./assets/picture.jpg" width="100px;" alt="Picture"/>
-<p><b>Nádia Ligia, budding back-end developer.</b></p>
-<a href="https://www.linkedin.com/in/nlnadialigia/">
-  <img alt="Linkedin" src="https://img.shields.io/badge/-Linkedin -91091e?style=flat&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/nlnadialigia/" />
+<img style="border-radius: 50%" src="https://avatars.githubusercontent.com/u/54655739?v=4/" width="100px;" alt="Picture"/>
+<p><b>Maycon Queiroz, budding back-end developer.</b></p>
+<a href="https://www.linkedin.com/in/maycon-queiroz-56572014a/">
+  <img alt="Linkedin" src="https://img.shields.io/badge/-Linkedin -91091e?style=flat&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/maycon-queiroz-56572014a/" />
 </a>&nbsp;
-<a href="mailto:nlnadialigia@gmail.com">
-  <img alt="Email" src="https://img.shields.io/badge/-Email-91091e?style=flat&logo=Gmail&logoColor=white&link=mailto:nlnadialigia@gmail.com" />
+<a href="mailto:fmaycon@gmail.com">
+  <img alt="Email" src="https://img.shields.io/badge/-Email-91091e?style=flat&logo=Gmail&logoColor=white&link=mailto:fmaycon@gmail.com" />
 </a>&nbsp;
-<a href="https://www.nlnadialigia.com">
-  <img alt="Homepage" src="https://img.shields.io/badge/-Homepage-91091e" />
-</a>
-
 <br><br>
 
 # 📝 License
