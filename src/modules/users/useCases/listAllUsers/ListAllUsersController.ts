@@ -7,7 +7,7 @@ class ListAllUsersController {
   constructor(private listAllUsersUseCase: ListAllUsersUseCase) { }
 
   handle(request: Request, response: Response): Response {
-    const { user_id } = request.body;
+    const { user_id } = <{ user_id: string }>request.headers;
 
     try {
       const users = this.listAllUsersUseCase.execute({ user_id });
