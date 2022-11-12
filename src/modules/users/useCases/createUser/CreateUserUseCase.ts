@@ -6,7 +6,9 @@ interface IRequest {
   email: string;
 }
 
+// eslint-disable-next-line prettier/prettier
 class CreateUserUseCase {
+  // eslint-disable-next-line prettier/prettier
   constructor(private usersRepository: IUsersRepository) { }
 
   execute({ email, name }: IRequest): User {
