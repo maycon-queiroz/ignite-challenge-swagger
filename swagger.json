@@ -1,0 +1,93 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "App Register Documentation",
+    "description": "This is a Rest API of the application about user registration",
+    "version": "1.0.0",
+    "contact": {
+      "name": "API Support",
+      "email": "fmaycon@gmail.com"
+    }
+  },
+  "paths": {
+    "/users": {
+      "post": {
+        "tags": [
+          "User"
+        ],
+        "summary": "Create a user",
+        "description": "Create a new user in application and return error if user already exists exists",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "name": {
+                    "type": "string"
+                  },
+                  "email": {
+                    "type": "string"
+                  }
+                }
+              },
+              "example": {
+                "name": "John Doe",
+                "email": "john_doe@example.com"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "User created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "name": {
+                      "type": "string",
+                      "description": "John Doe"
+                    },
+                    "email": {
+                      "type": "string",
+                      "description": "john_doe@example.com"
+                    },
+                    "admin": {
+                      "type": "boolean",
+                      "description": "false"
+                    }
+                  }
+                },
+                "example": {
+                  "name": "John Doe",
+                  "email": "john_doe@example.com",
+                  "admin": false
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Already exist a user to this email",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "error": {
+                      "type": "string"
+                    }
+                  }
+                },
+                "example": {
+                  "error": "User Already Exists"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
