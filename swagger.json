@@ -43,23 +43,6 @@
             "description": "User created",
             "content": {
               "application/json": {
-                "schema": {
-                  "type": "object",
-                  "properties": {
-                    "name": {
-                      "type": "string",
-                      "description": "John Doe"
-                    },
-                    "email": {
-                      "type": "string",
-                      "description": "john_doe@example.com"
-                    },
-                    "admin": {
-                      "type": "boolean",
-                      "description": "false"
-                    }
-                  }
-                },
                 "example": {
                   "name": "John Doe",
                   "email": "john_doe@example.com",
@@ -72,16 +55,71 @@
             "description": "Already exist a user to this email",
             "content": {
               "application/json": {
-                "schema": {
-                  "type": "object",
-                  "properties": {
-                    "error": {
-                      "type": "string"
-                    }
-                  }
-                },
                 "example": {
                   "error": "User Already Exists"
+                }
+              }
+            }
+          }
+        }
+      },
+      "get": {
+        "tags": [
+          "User"
+        ],
+        "summary": "List users",
+        "description": "List all user if user request is admin",
+        "parameters": [
+          {
+            "name": "user_id",
+            "in": "header",
+            "description": "String with user_id of the admin user",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            },
+            "allowEmptyValue": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "list user",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "id": {
+                        "type": "string"
+                      },
+                      "admin": false,
+                      "name": {
+                        "type": "string"
+                      },
+                      "email": {
+                        "type": "string"
+                      },
+                      "created_at": {
+                        "type": "string"
+                      },
+                      "update_at": {
+                        "type": "string"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Already exist a user to this email",
+            "content": {
+              "application/json": {
+                "example": {
+                  "error": "User not found or not is admin"
                 }
               }
             }
