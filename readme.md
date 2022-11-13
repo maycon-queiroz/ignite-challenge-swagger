@@ -1,7 +1,7 @@
 <p align="center">
   <img src="./assets/logo.png" alt="Cover Ignite Node">
 </p>
-<h2 align="center">Chapter II - Challenge</h2>
+<h2 align="center">Chapter II - Challenge Swagger</h2>
 <h1 align="center">Users Management</h1>
 
 <h1 align="center">
@@ -28,9 +28,9 @@
 
 # 📔-About the challenge
 
-In this Challenge we create an Users Management API.
+In this challenge, you must create an application to train what you have learned so far in Node.js!
 
-The user needs to be an admin to make the list users works.
+Using an already functional application as a base, document the routes with Swagger.
 
 ## 📚-API Routes
 
@@ -134,7 +134,7 @@ throw new Error("Mensagem do erro");
 ```
 ### 📌 Should be able to list all users
 
-For this test, the `execute` method of ListAllUsersUseCase file must recieve the user `id`, call the repository's method which return all created users and return this info.
+For this test, the `execute` method of ListAllUsersUseCase file must receive the user `id`, call the repository's method which return all created users and return this info.
 
 ### 📌 Should not be able to a non admin user get list of all users
 
@@ -178,7 +178,7 @@ For this test, if an error has occurred in useCase, return a response with statu
 ## 📝 Rota - [GET] /users/:user_id
 ### 📌 Should be able to get user profile by ID
 
-For this test, using the proper useCase, the route must recieve the user `id` by route params and return the founded user object in the response body.
+For this test, using the proper useCase, the route must receive the user `id` by route params and return the founded user object in the response body.
 
 ### 📌 Should not be able to show profile of a non existing user
 
@@ -187,7 +187,7 @@ For this test, if an error has occurred in useCase, return a response with statu
 ## 📝 Rota - [GET] /users
 ### 📌 Should be able to list all users
 
-For this test, using the proper useCase, the route must recieve the `admin` user `id` from `user_id` request header and return a user list created.
+For this test, using the proper useCase, the route must receive the `admin` user `id` from `user_id` request header and return a user list created.
 
 ### 📌 Should not be able to a non admin user get list of all users and Should not be able to a non existing user get list of all users
 
